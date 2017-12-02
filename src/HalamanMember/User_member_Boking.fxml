@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1100.0" style="-fx-background-color: #00283c;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanMember.User_member_BokingController">
+   <children>
+      <JFXButton fx:id="btnHome" alignment="TOP_LEFT" layoutY="83.0" onAction="#btnHomeProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton fx:id="btnAkun" alignment="TOP_LEFT" layoutY="121.0" onAction="#btnAkunProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Akun" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="112.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="51.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="24.0" text="INFORMATIC RED CROSS" textFill="WHITE" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Aparajita Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="63.0" layoutY="52.0" prefWidth="200.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="42.0" />
+      <JFXButton fx:id="btnLogout" alignment="TOP_LEFT" layoutX="10.0" layoutY="420.0" onAction="#btnLogoutProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="410.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <AnchorPane layoutX="257.0" layoutY="65.0" prefHeight="425.0" prefWidth="853.0" style="-fx-background-color: #e6e6e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="247.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <Label layoutX="378.0" layoutY="14.0" text="Data Transaksi">
+               <font>
+                  <Font name="Aparajita" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableBok" layoutX="24.0" layoutY="66.0" prefHeight="253.0" prefWidth="814.0" style="-fx-background-color: rgba(0, 219, 255,0.2);">
+               <columns>
+                  <TableColumn fx:id="tbIdBokingBok" prefWidth="61.0" style="-fx-background-color: #00a6ff;" text="ID Boking" />
+                  <TableColumn fx:id="tbNamaUBok" prefWidth="175.0" style="-fx-background-color: #009bff;" text="Nama User" />
+                  <TableColumn fx:id="tbNamaBBok" prefWidth="170.0" style="-fx-background-color: #00a6ff;" text="Nama Barang" />
+                  <TableColumn fx:id="tbJumlahBok" prefWidth="51.0" style="-fx-background-color: #009bff;" text="Jumlah" />
+                  <TableColumn fx:id="tbTglBok" prefWidth="90.0" style="-fx-background-color: #00a6ff;" text="Tanggal" />
+                  <TableColumn fx:id="tbStatusBok" minWidth="0.0" prefWidth="89.0" style="-fx-background-color: #009bff;" text="Status" />
+                  <TableColumn fx:id="tbCatBok" prefWidth="177.0" style="-fx-background-color: #00a6ff;" text="Catatan" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnExitBok" layoutX="748.0" layoutY="382.0" onAction="#btnExitBokProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #d60000;" styleClass="button-admin-red" stylesheets="@../Design/Style.css" text="Exit" textFill="WHITE" />
+            <Separator layoutX="344.0" layoutY="42.0" prefHeight="3.0" prefWidth="166.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="1058.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1048.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../Images/user1.1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="LabelUser" alignment="CENTER_RIGHT" layoutX="782.0" layoutY="27.0" prefHeight="23.0" prefWidth="256.0" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="782.0" AnchorPane.topAnchor="17.0">
+         <font>
+            <Font name="Aparajita" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="27.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="77.0">
+         <image>
+            <Image url="@../Images/Home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="28.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="117.0">
+         <image>
+            <Image url="@../Images/user22.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="28.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="415.0">
+         <image>
+            <Image url="@../Images/exit.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnDataBok" alignment="TOP_LEFT" layoutY="150.0" onAction="#btnListBokProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Data Transaksi" textFill="WHITE">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="18.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/folder.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

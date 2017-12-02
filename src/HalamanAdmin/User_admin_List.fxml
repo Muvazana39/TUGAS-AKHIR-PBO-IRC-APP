@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="1100.0" style="-fx-background-color: #00283c;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HalamanAdmin.User_admin_ListController">
+   <children>
+      <JFXButton fx:id="btnHome" alignment="TOP_LEFT" layoutY="83.0" onAction="#btnHomeProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Home" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="73.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <JFXButton fx:id="btnListBarang" alignment="TOP_LEFT" layoutY="121.0" onAction="#btnListBarangProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="List Barang" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="112.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <ImageView fitHeight="45.0" fitWidth="51.0" layoutX="24.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../Images/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="65.0" layoutY="24.0" text="INFORMATIC RED CROSS" textFill="WHITE" AnchorPane.leftAnchor="55.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Aparajita Bold Italic" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="63.0" layoutY="52.0" prefWidth="200.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="42.0" />
+      <JFXButton fx:id="btnLogout" alignment="TOP_LEFT" layoutX="10.0" layoutY="420.0" onAction="#btnLogoutProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Logout" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="410.0">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <AnchorPane layoutX="257.0" layoutY="65.0" prefHeight="425.0" prefWidth="853.0" style="-fx-background-color: #e6e6e6;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="247.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <Label layoutX="365.0" layoutY="14.0" text="Pengaturan Barang">
+               <font>
+                  <Font name="Aparajita" size="20.0" />
+               </font>
+            </Label>
+            <TableView fx:id="TableList" layoutX="267.0" layoutY="66.0" prefHeight="253.0" prefWidth="571.0" style="-fx-background-color: rgba(0, 219, 255,0.2);">
+               <columns>
+                  <TableColumn fx:id="tbIdBarangList" prefWidth="64.0" style="-fx-background-color: #00a6ff;" text="ID Barang" />
+                  <TableColumn fx:id="tbNamaList" prefWidth="152.0" style="-fx-background-color: #009bff;" text="Nama Barang" />
+                  <TableColumn fx:id="tbJenisList" prefWidth="100.0" style="-fx-background-color: #00a6ff;" text="Jenis" />
+                  <TableColumn fx:id="tbJumlahList" prefWidth="86.0" style="-fx-background-color: #009bff;" text="Jumlah" />
+                  <TableColumn fx:id="tbDeskList" prefWidth="168.0" style="-fx-background-color: #00a6ff;" text="Deskripsi" />
+               </columns>
+            </TableView>
+            <JFXButton fx:id="btnHapusAllList" layoutX="735.0" layoutY="327.0" onAction="#btnHapusAllListProses" prefHeight="29.0" prefWidth="103.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Hapus Semua" textFill="WHITE" AnchorPane.rightAnchor="15.0" />
+            <JFXButton fx:id="btnExitList" layoutX="748.0" layoutY="382.0" onAction="#btnExitListProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #d60000;" styleClass="button-admin-red" stylesheets="@../Design/Style.css" text="Exit" textFill="WHITE" />
+            <Separator layoutX="327.0" layoutY="42.0" prefHeight="3.0" prefWidth="200.0" />
+            <AnchorPane layoutX="14.0" layoutY="66.0" prefHeight="346.0" prefWidth="240.0" style="-fx-background-color: white;">
+               <children>
+                  <Label layoutX="78.0" text="Edit Barang">
+                     <font>
+                        <Font name="Aparajita Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <GridPane layoutX="9.0" layoutY="37.0" prefHeight="150.0" prefWidth="211.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="69.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="131.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label text="Nama Barang" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Aparajita" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Jenis" GridPane.rowIndex="2">
+                           <font>
+                              <Font name="Aparajita" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="ID Barang">
+                           <font>
+                              <Font name="Aparajita" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Deskripsi" GridPane.rowIndex="4">
+                           <font>
+                              <Font name="Aparajita" size="17.0" />
+                           </font>
+                        </Label>
+                        <Label text="Jumlah" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="Aparajita" size="17.0" />
+                           </font>
+                        </Label>
+                        <JFXComboBox fx:id="VJenisList" prefHeight="25.0" prefWidth="115.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets left="7.0" />
+                           </GridPane.margin>
+                        </JFXComboBox>
+                        <JFXTextField fx:id="VNamaList" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <JFXTextField fx:id="VJumlahList" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="VIdList" prefHeight="23.0" prefWidth="131.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="7.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <JFXTextField fx:id="VDeskirpsiList" unFocusColor="BLACK" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <JFXButton fx:id="btnHapusDataList" layoutX="20.0" layoutY="303.0" onAction="#btnHapusDataListProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Hapus Barang" textFill="WHITE" />
+                  <JFXButton fx:id="btnUpdateList" layoutX="130.0" layoutY="256.0" onAction="#btnUpdateListProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Update" textFill="WHITE" />
+                  <Separator layoutX="49.0" layoutY="27.0" prefHeight="5.0" prefWidth="143.0" />
+                  <JFXButton fx:id="btnSimpanList" layoutX="130.0" layoutY="303.0" onAction="#btnSimpanListProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Simpan" textFill="WHITE" />
+                  <JFXButton fx:id="btnHapusFList" layoutX="20.0" layoutY="256.0" onAction="#btnHapusFListProses" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Hapus Field" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="269.0" layoutY="330.0" text="Cari Dari Jenis :">
+               <font>
+                  <Font name="Aparajita" size="17.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="CariList" layoutX="379.0" layoutY="329.0" prefHeight="25.0" prefWidth="115.0" />
+            <JFXButton fx:id="btnCariList" layoutX="509.0" layoutY="327.0" onAction="#btnCariListProses" prefHeight="29.0" prefWidth="53.0" style="-fx-background-color: #00cbff;" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Cari" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="38.0" fitWidth="39.0" layoutX="1058.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="1048.0" AnchorPane.topAnchor="10.0">
+         <image>
+            <Image url="@../Images/user1.1.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="LabelUser" alignment="CENTER_RIGHT" layoutX="782.0" layoutY="27.0" prefHeight="23.0" prefWidth="256.0" textAlignment="RIGHT" textFill="WHITE" AnchorPane.leftAnchor="782.0" AnchorPane.topAnchor="17.0">
+         <font>
+            <Font name="Aparajita" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="38.0" fitWidth="31.0" layoutX="27.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="77.0">
+         <image>
+            <Image url="@../Images/Home.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="28.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="117.0">
+         <image>
+            <Image url="@../Images/tasks-list.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="29.0" fitWidth="31.0" layoutX="28.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="415.0">
+         <image>
+            <Image url="@../Images/exit.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnDataBok" alignment="TOP_LEFT" layoutY="150.0" onAction="#btnListDataProses" prefHeight="38.0" prefWidth="246.0" style="-fx-background-color: rgba(0, 203, 255, 0.3);" styleClass="button-admin-blue" stylesheets="@../Design/Style.css" text="Data Transaksi" textFill="WHITE">
+         <font>
+            <Font name="Aparajita" size="18.0" />
+         </font>
+         <padding>
+            <Insets left="60.0" top="5.0" />
+         </padding>
+      </JFXButton>
+      <ImageView fitHeight="31.0" fitWidth="29.0" layoutX="17.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/folder.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

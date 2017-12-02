@@ -1,0 +1,6 @@
+.button-admin-blue :hover{
+    -fx-background-color: #0083ff;
+}
+.button-admin-red :hover{
+    -fx-background-color:  #b70000;
+}
